@@ -1,0 +1,14 @@
+node_modules
+npm-debug.log
+.tmp
+.idea
+public
+compiled
+.swp
+.vscode
+.DS_Store
+uploads
+tmp
+**.swp
+dump.rdb
+yarn-error.log

@@ -1,0 +1,15 @@
+{
+    "verbose": false,
+    "watch": [
+      "app/server.jsx",
+      "app/routes.jsx",
+      "app/helmconfig.js",
+      "app/components/Meta.jsx",
+      "server",
+      "webpack/webpack.dev.babel.js",
+      "webpack/webpack.prod.babel.js",
+      "webpack/webpack.base.babel.js",
+      ".stylelintrc"
+    ],
+    "exec": "npm run build:dev && npm run babel-node -- ./server/index.js"
+}

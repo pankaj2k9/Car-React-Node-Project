@@ -1,0 +1,28 @@
+@import '../../../css/common/text';
+
+.interstitialCardContent {
+  position: relative;
+  z-index: 10;
+
+  @media(--desktop) {
+    height: 100vh;
+  }
+}
+
+.locationName {
+  @apply --locationName;
+  position: absolute;
+  top: 74.5vw;
+  width: 100%;
+  text-align: center;
+
+  &[data-black='true'] {
+    color: var(--colorBlack);
+  }
+
+  @media(--desktop) {
+    width: 19.7vw;
+    right: 26vw;
+    top: 54vh;
+  }
+}

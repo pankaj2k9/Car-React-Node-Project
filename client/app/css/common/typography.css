@@ -1,0 +1,9 @@
+:root {
+  --fontSourceSerifBold: 'Source Serif Pro Bold', sans-serif;
+  --fontRobotoMonoMedium: 'Roboto Mono Medium', sans-serif;
+  --fontRobotoMonoBold: 'Roboto Mono Bold', sans-serif;
+  --fontLatoRegular: 'Lato Regular', sans-serif;
+  --fontLatoSemibold: 'Lato Semibold', sans-serif;
+  --fontLatoMedium: 'Lato Medium', sans-serif;
+  --fontLatoHeavy: 'Lato Heavy', sans-serif;
+}

@@ -1,0 +1,80 @@
+@import '../../css/common/text';
+
+.interstitial {
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+
+  &[data-black="true"] {
+    background-color: var(--colorBlack);
+  }
+
+  &[data-white="true"] {
+    background-color: var(--colorWhite);
+  }
+}
+
+.interstitial[data-white="true"] .coordinates {
+  color: var(--colorBlack);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--colorBlack);
+  opacity: 0;
+}
+
+.map {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media(--desktop) {
+    right: 26vw;
+    left: auto;
+    transform: none;
+  }
+}
+
+.mapImage {
+  width: 49.3vw;
+
+  @media(--desktop) {
+    width: 19.7vw;
+  }
+}
+
+.coordinates {
+  @apply --coordinates;
+  margin: 2.5vw 0;
+}
+
+.backgroundWrapper {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media(--desktop) {
+    height: 100vh;
+  }
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blackBackground {
+  width: 100%;
+  height: 100%;
+  background: var(--colorBlack);
+}

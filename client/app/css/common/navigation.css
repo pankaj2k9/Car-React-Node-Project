@@ -1,0 +1,26 @@
+@import 'breakpoints';
+@import 'spacing';
+@import 'colors';
+
+:root {
+  --menuListItem {
+    padding-bottom: 2vw;
+
+
+      &:first-child:before {
+        display: none;
+      }
+
+  }
+  --menuLink {
+    font-family: 'Source Serif Pro Bold', sans-serif;
+    color: var(--colorWhite);
+    cursor: pointer;
+    letter-spacing: 0.23px;
+    font-size: 1.3vw;
+
+    &:after {
+      display: none;
+    }
+  }
+}

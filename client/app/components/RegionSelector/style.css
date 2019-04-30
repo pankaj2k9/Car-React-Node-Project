@@ -1,0 +1,200 @@
+@import '../../css/common/text';
+@import '../../css/common/breakpoints';
+@import '../../css/common/colors';
+
+.regionSelector {
+  width: 100vw;
+  overflow: hidden;
+
+  @media (--desktop) {
+    height: 100vh;
+  }
+}
+
+.imageWrapper {
+  height: 100%;
+  width: 100vw;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+    background: var(--colorBlack);
+    content: '';
+    pointer-events: none;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.backgroundSlide {
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  bottom: -105vh;
+}
+
+.contentContainer {
+  width: 100vw;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 200;
+
+
+  @media (--desktop) {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 0 13.3vw;
+  }
+}
+
+
+.headline {
+  @apply --headlineSmall;
+  margin-bottom: 5vw;
+
+  @media (--desktop) {
+    margin-bottom: 2.5vw;
+  }
+}
+
+.titleBox {
+  height: 30.9vw;
+  position: relative;
+  overflow: hidden;
+  width: 80vw;
+
+  @media(--desktop) {
+    height: 7.3vw;
+    width: 50vw;
+  }
+}
+
+.titleText {
+  @apply --titleLarge;
+  position: absolute;
+  top: 31vw;
+}
+
+.subtitleBox {
+  height: 7.5vw;
+  overflow: hidden;
+  position: relative;
+  width: 71vw;
+
+  @media(--desktop) {
+    height: 3.4vw;
+    width: 50vw;
+    text-align: left;
+  }
+}
+
+.subtitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.subtitleText {
+  position: absolute;
+  @apply --titleSmall;
+  top: 8vw;
+}
+
+.line {
+  border-top: 2px solid var(--colorWhite);
+  height: 2px;
+  width: 9vw;
+  margin-right: 3vw;
+
+  @media(--desktop) {
+    width: 8vw;
+    margin-right: 1vw;
+  }
+}
+
+.linkWrapper {
+  padding-top: 8vw;
+  align-items: center;
+  display: none;
+
+  @media (--desktop) {
+    display: flex;
+    padding-top: 5vw;
+  }
+}
+
+.startJourney {
+  font-family: var(--fontSourceSerifBold);
+  color: var(--colorWhite);
+  letter-spacing: 0.1px;
+  line-height: 1;
+  text-decoration: underline;
+
+  @media(--desktop) {
+    font-size: 1.3vw; /* 24px */
+  }
+}
+
+.arrow {
+  width: 3vw;
+  margin-left: 3vw;
+  object-fit: contain;
+  display: inline-block;
+
+  @media (--desktop) {
+    width: 1vw;
+    margin-left: 1.3vw;
+  }
+}
+
+.regionsList {
+  margin-top: 20vw;
+  overflow-y: scroll;
+  height: 40vw;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (--desktop) {
+    height: auto;
+    margin-top: 3vw;
+  }
+}
+
+.regionLink {
+  margin-bottom: 8vw;
+  width: 100%;
+  display: block;
+  text-align: right;
+
+  @media (--desktop) {
+    margin-bottom: 2vw;
+  }
+}
+
+.place {
+  @apply --titleSmall;
+  text-transform: capitalize;
+
+  @media(--desktop) {
+    letter-spacing: 0.23px;
+    font-size: 1.3vw; /* 24px */
+  }
+}

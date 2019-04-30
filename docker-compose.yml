@@ -1,0 +1,12 @@
+version: '2'
+services:
+  client:
+    image: docker.io/wildebeestdev/wildebeest:client-latest
+    build:
+      context: client
+      dockerfile: Dockerfile-dev
+    volumes:
+      - ./client:/usr/src/app
+    command: yarn run dev
+    ports:
+      - 3000:3000

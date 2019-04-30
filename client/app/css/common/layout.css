@@ -1,0 +1,10 @@
+@import 'breakpoints';
+@import 'spacing';
+@import 'colors';
+@import 'navigation';
+@import 'footer';
+
+:root {
+  --section {
+  }
+}

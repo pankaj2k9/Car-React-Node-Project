@@ -1,0 +1,28 @@
+@import '../../../css/common/breakpoints';
+@import '../../../css/common/typography';
+
+.modal {
+  display: none;
+}
+
+.openModal {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+
+}
+
+.body {
+  position: absolute;
+  text-align: center;
+  font-size: 40px;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px; /* Half the width */
+  font-family: var(--fontSourceSerifBold);
+}

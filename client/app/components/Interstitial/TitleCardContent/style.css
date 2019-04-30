@@ -1,0 +1,88 @@
+@import '../../../css/common/text';
+@import '../../../css/common/colors';
+@import '../../../css/common/spacing';
+
+.titleCardContent {
+  position: relative;
+  z-index: 10;
+
+  @media(--desktop) {
+    height: 100vh;
+  }
+}
+
+.contentWrapper {
+  position: absolute;
+  top: 40vw;
+  width: calc(100vw - 26.6vw); /* 50px margin on each side */
+  margin-left: 13.3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media(--desktop) {
+    width: auto;
+    top: 36vh;
+  }
+}
+
+.title {
+  @apply --titleLarge;
+  margin-bottom: var(--spacingXXS);
+
+  @media(--desktop) {
+    margin-bottom: 0;
+    font-size: 7.3vw;
+  }
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: var(--spacingXL);
+
+  @media(--desktop) {
+    margin-bottom: 4vw;
+  }
+}
+
+.subtitleLine {
+  height: 2px;
+  width: 8vw;
+  background: var(--colorWhite);
+  margin-right: var(--spacingS);
+
+  @media(--desktop) {
+    width: 6vw;
+    margin-right: 1vw;
+    height: 3px;
+  }
+}
+
+.subtitleText {
+  @apply --titleSmall;
+}
+
+.description {
+  @apply --descriptionSmall;
+  width: 53vw;
+
+  @media(--desktop) {
+    width: 26.5vw;
+  }
+}
+
+.locationName {
+  @apply --locationName;
+  position: absolute;
+  top: 130vw;
+  width: 100%;
+  text-align: center;
+
+  @media(--desktop) {
+    width: 19.7vw;
+    right: 26vw;
+    top: 54vh;
+  }
+}

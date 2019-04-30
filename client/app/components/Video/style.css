@@ -1,0 +1,125 @@
+@import '../../css/common/text';
+@import '../../css/common/colors';
+@import '../../css/common/breakpoints';
+
+.video {
+  position: relative;
+  background-color: var(--colorWhite);
+  color: var(--colorBlack);
+  overflow: hidden;
+
+  @media (--desktop) {
+    height: 100vh;
+  }
+}
+
+.backgroundWrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+    background: var(--colorBlack);
+    width: 100%;
+    height: 100%;
+    content: '\A';
+    pointer-events: none;
+  }
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.watch {
+  font-size: 3.7vw; /* 14px */
+  font-family: var(--fontRobotoMonoMedium);
+  letter-spacing: 0;
+  line-height: 1;
+  color: var(--colorWhite);
+
+  @media(--desktop) {
+    font-size: 1vw; /* 20px */
+  }
+}
+
+.title {
+  font-size: 9.1vw; /* 34px */
+  font-family: var(--fontSourceSerifBold);
+  letter-spacing: 0.15px;
+  line-height: 1.2;
+  color: var(--colorWhite);
+  cursor: pointer;
+
+  @media(--desktop) {
+    font-size: 5.2vw; /* 100px */
+    letter-spacing: ;
+  }
+}
+
+.redText {
+  color: var(--colorRed);
+}
+
+.contentContainer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8vw;
+
+
+  @media (--desktop) {
+    padding: 0 13.3vw;
+  }
+}
+
+.descriptionWrapper {
+    padding-left: 4vw;
+    margin-top: 4vw;
+    border-left: 2px solid var(--colorWhite);
+
+    @media (--desktop) {
+      padding-left: 1.5vw;
+      margin-top: 2vw;
+    }
+}
+
+.description {
+  @apply --descriptionLarge;
+  font-family: var(--fontLatoMedium);
+  cursor: pointer;
+
+  @media (--desktop) {
+    width: 50%;
+  }
+}
+
+.playVideoContainer {
+  padding-bottom: 50vw;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  @media (--desktop) {
+    padding-bottom: 8vw;
+  }
+}
+
+.playVideoIcon {
+  width: 10vw;
+  object-fit: contain;
+  margin-right: 3vw;
+  display: inline-block;
+
+  @media (--desktop) {
+    width: 4vw;
+    margin-right: 1.3vw;
+  }
+}

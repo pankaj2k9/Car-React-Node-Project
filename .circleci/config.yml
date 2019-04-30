@@ -1,0 +1,62 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: wildebeestdev/circleci-docker-image:1.5.0
+        auth:
+          username: wildebeestcircleci
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+          version: 17.09.0-ce
+      - run: |
+          docker build -t d.wdb.st/toyota-uproxx:$CIRCLE_SHA1 -t d.wdb.st/toyota-uproxx:latest -f client/Dockerfile client
+          docker login d.wdb.st -u wildebeest -p $DWDBST_PASSWORD
+          docker push d.wdb.st/toyota-uproxx
+  deploy:
+    docker:
+      - image: wildebeestdev/circleci-docker-image:1.5.0
+        auth:
+          username: wildebeestcircleci
+          password: $DOCKERHUB_PASSWORD
+    working_directory: /root
+    steps:
+      - run: |
+          git clone git@github.com:AlchemyInteractive/k8s-config.git
+          # image_name, version, path to config, path to file, namespace
+          /root/k8s-config/circle-scripts/deploy.sh toyota-uproxx $CIRCLE_SHA1 toyota/config toyota/staging/05-wordpress-deployment.yaml toyota d.wdb.st
+          cd /root/k8s-config && git commit -am "CircleCI modifications to toyota STAGING deployment"
+          cd /root/k8s-config && git push origin master
+  proddeploy:
+    docker:
+      - image: wildebeestdev/circleci-docker-image:1.5.0
+        auth:
+          username: wildebeestcircleci
+          password: $DOCKERHUB_PASSWORD
+    working_directory: /root
+    steps:
+      - run: |
+          git clone git@github.com:AlchemyInteractive/k8s-config.git
+          # image_name, version, path to config, path to file, namespace
+          /root/k8s-config/circle-scripts/deploy.sh toyota-uproxx $CIRCLE_SHA1 toyota/production_config toyota/production/05-wordpress-deployment.yaml default d.wdb.st
+          cd /root/k8s-config && git commit -am "CircleCI modifications to toyota-uproxx PRODUCTION deployment"
+          cd /root/k8s-config && git push origin master
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: develop
+      - proddeploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: production

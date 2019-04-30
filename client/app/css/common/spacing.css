@@ -1,0 +1,20 @@
+@import 'breakpoints';
+
+:root {
+
+  --spacingXXS:               1.3vw;    /* 5px */
+  --spacingXS:                2.7vw;    /* 10px */
+  --spacingS:                 4vw;      /* 15px */
+  --spacingM:                 5.3vw;    /* 20px */
+  --spacingL:                 6.7vw;    /* 25px */
+  --spacingXL:                8vw;      /* 30px */
+  --spacingXXL:               12vw;     /* 45px */
+  --spacingXXSDesktop:        0.3vw;    /* 5px */
+  --spacingXSDesktop:         0.5vw;    /* 10px */
+  --spacingSDesktop:          0.8vw;    /* 15px */
+  --spacingMDesktop:          1vw;      /* 20px */
+  --spacingLDesktop:          1.3vw;    /* 25px */
+  --spacingXLDesktop:         1.6vw;    /* 30px */
+  --spacingXXLDesktop:        2.3vw;    /* 45px */
+  --maxWidth:                 var(--breakpointDesktop);
+}

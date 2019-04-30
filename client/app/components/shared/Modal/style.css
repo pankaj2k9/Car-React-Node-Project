@@ -1,0 +1,43 @@
+@import '../../../css/common/breakpoints';
+
+.modal {
+  display: none;
+}
+
+.openModal {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+
+  @media (--desktop) {
+    height: 100vh;
+  }
+}
+
+iframe {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+
+  @media(--desktop) {
+    height: 70%;
+    width: 80%;
+  }
+}
+
+.body {
+  overflow:hidden;
+  position:relative;
+  padding-bottom: 56.25%; /* aspect ratio 16:9*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

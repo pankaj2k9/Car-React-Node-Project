@@ -1,0 +1,134 @@
+@import '../../css/common/text';
+
+.interstitialMap {
+  position: relative;
+  z-index: 10;
+
+  @media(--desktop) {
+    height: 100vh;
+  }
+
+  &[data-black='true'] * {
+    color: var(--colorBlack);
+  }
+}
+
+.upNext {
+  font-size: 3.2vw; /* 12px */
+  font-family: var(--fontSourceSerifBold);
+  letter-spacing: 0.33px;
+  line-height: 1;
+  color: var(--colorWhite);
+
+  @media(--desktop) {
+    font-size: 1.6vw; /* 30px */
+    margin-bottom: 3vw;
+  }
+}
+
+.title {
+  @apply --titleSmall;
+
+  @media (--desktop) {
+    font-size: 5.2vw; /* 100px */
+    letter-spacing: 0.95px;
+  }
+}
+
+.coordinates {
+  @apply --coordinates;
+}
+
+.label {
+  font-size: 3.2vw; /* 12px */
+  font-family: var(--fontLatoRegular);
+  letter-spacing: 0.6px;
+  line-height: 1;
+  color: var(--colorWhite);
+
+  @media(--desktop) {
+    font-size: 1vw; /* 20px */
+    line-height: 1.2;
+  }
+}
+
+.value {
+  font-size: 3.2vw; /* 12px */
+  font-family: var(--fontLatoHeavy);
+  letter-spacing: 0.6px;
+  line-height: 1;
+  color: var(--colorWhite);
+
+  @media(--desktop) {
+    font-size: 1.3vw; /* 24px */
+    margin-top: 1vw;
+  }
+}
+
+.header {
+  padding-top: 8vw;
+  text-align: center;
+
+  @media(--desktop) {
+    padding-top: 0;
+    text-align: left;
+    width: 40vw;
+    margin-left: 13.3vw;
+    top: 42%;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+}
+
+.stats {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  bottom: 0;
+  width: calc(100vw - 13.2vw); /* 100vw - 25px on each side */
+  margin-left: 6.7vw;
+  height: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2vw 0px;
+
+  @media(--desktop) {
+    margin-left: 13.3vw;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    border-top: 0;
+    bottom: auto;
+    top: 61%;
+    height: auto;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  order: 2;
+
+  @media(--desktop) {
+    flex-direction: column;
+  }
+}
+
+.row:first-child {
+  @media(--desktop) {
+    margin-left: 8vw;
+  }
+}
+
+.row:nth-child(2) {
+  @media(--desktop) {
+    order: 1;
+  }
+}
+
+.desktopBreak {
+  @media(--desktop) {
+    display: block;
+  }
+}

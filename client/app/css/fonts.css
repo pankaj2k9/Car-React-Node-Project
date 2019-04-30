@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Source Serif Pro Bold';
+  font-display: swap;
+  src: url('../fonts/SourceSerifPro-Bold.woff2') format('woff2'),
+    url('../fonts/SourceSerifPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SourceSerifPro-Bold.ttf'),
+    url('../fonts/SourceSerifPro-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Mono Medium';
+  font-display: swap;
+  src: url('../fonts/RobotoMono-Medium.woff2') format('woff2'),
+    url('../fonts/RobotoMono-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RobotoMono-Medium.ttf'),
+    url('../fonts/RobotoMono-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Mono Bold';
+  font-display: swap;
+  src: url('../fonts/RobotoMono-Bold.ttf'),
+    url('../fonts/RobotoMono-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RobotoMono-Bold.woff2') format('woff2'),
+    url('../fonts/RobotoMono-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato Regular';
+  font-display: swap;
+  src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+  url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Lato-Regular.ttf'),
+  url('../fonts/Lato-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato Semibold';
+  font-display: swap;
+  src: url('../fonts/Lato-Semibold.woff2') format('woff2'),
+  url('../fonts/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Lato-Semibold.ttf'),
+  url('../fonts/Lato-Semibold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato Medium';
+  font-display: swap;
+  src: url('../fonts/Lato-Medium.woff2') format('woff2'),
+  url('../fonts/Lato-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Lato-Medium.ttf'),
+  url('../fonts/Lato-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato Heavy';
+  font-display: swap;
+  src: url('../fonts/Lato-Heavy.woff2') format('woff2'),
+  url('../fonts/Lato-Heavy.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Lato-Heavy.ttf'),
+  url('../fonts/Lato-Heavy.woff') format('woff');
+}

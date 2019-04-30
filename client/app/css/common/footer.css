@@ -1,0 +1,8 @@
+@import 'breakpoints';
+@import 'spacing';
+@import 'colors';
+
+:root {
+  --footer {
+  }
+}

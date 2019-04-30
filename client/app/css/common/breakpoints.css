@@ -1,0 +1,16 @@
+:root {
+
+  --breakpointPhoneSmall:     320px;
+  --breakpointPhoneMedium:    375px;
+  --breakpointPhoneLarge:     512px;
+  --breakpointPhoneXLarge:    640px;
+  --breakpointTablet:         768px;
+  --breakpointDesktopSmall:   1024px;
+  --breakpointDesktopMedium:  1280px;
+  --breakpointDesktopLarge:   1440px;
+  --breakpointDesktopXLarge:  1920px;
+
+  @custom-media --tablet (min-width: 768px);
+  @custom-media --desktop (min-width: 1024px);
+
+}

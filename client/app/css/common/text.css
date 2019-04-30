@@ -1,0 +1,106 @@
+@import 'breakpoints';
+@import 'typography';
+@import 'colors';
+
+:root {
+  --titleLarge: {
+    font-size: 15.5vw; /* 58px */
+    font-family: var(--fontSourceSerifBold);
+    letter-spacing: 0.55px;
+    line-height: 1;
+    color: var(--colorWhite);
+
+    @media(--desktop) {
+      font-size: 7.3vw; /* 140px */
+      letter-spacing: 1.5px;
+    }
+  }
+
+  --titleSmall: {
+    font-size: 7.5vw; /* 28px */
+    font-family: var(--fontSourceSerifBold);
+    letter-spacing: 0.12px;
+    line-height: 1;
+    color: var(--colorWhite);
+
+    @media(--desktop) {
+      font-size: 3.4vw; /* 65px */
+    }
+  }
+
+  --descriptionSmall: {
+    font-size: 3.2vw; /* 12px */
+    font-family: var(--fontLatoSemibold);
+    letter-spacing: 0.33px;
+    line-height: 1.5;
+    color: var(--colorWhite);
+
+    @media(--desktop) {
+      font-size: 1.3vw; /* 24px */
+    }
+  }
+
+  --descriptionLarge: {
+    font-size: 3.7vw; /* 14px */
+    font-family: var(--fontLatoRegular);
+    letter-spacing: 0.39px;
+    line-height: 1.5;
+    color: var(--colorWhite);
+
+    @media(--desktop) {
+      font-size: 1.3vw; /* 24px */
+      letter-spacing: 0.66;
+      line-height: 1.75;
+    }
+  }
+
+  --locationName: {
+    font-size: 4.3vw; /* 16px */
+    font-family: var(--fontRobotoMonoMedium);
+    letter-spacing: 0;
+    line-height: 1;
+    color: var(--colorWhite);
+
+    @media(--desktop) {
+      font-size: 1vw; /* 20px */
+    }
+  }
+
+  --coordinates: {
+    font-size: 3.2vw; /* 12px */
+    font-family: var(--fontRobotoMonoMedium);
+    letter-spacing: 0;
+    line-height: 1;
+    color: var(--colorWhite);
+
+    @media(--desktop) {
+      font-size: 0.8vw; /* 16px */
+    }
+  }
+
+  --readArticle: {
+    font-size: 4.3vw; /* 16px */
+    font-family: var(--fontSourceSerifBold);
+    letter-spacing: 0.07px;
+    line-height: 1;
+    color: var(--colorWhite);
+
+    @media(--desktop) {
+      font-size: 1.1vw; /* 22px */
+      letter-spacing: 0.09px;
+    }
+  }
+
+  --headlineSmall: {
+    font-size: 3.7vw; /* 14px */
+    font-family: var(--fontRobotoMonoBold);
+    letter-spacing: 0.35;
+    line-height: 1;
+    color: var(--colorWhite);
+
+    @media(--desktop) {
+      font-size: 0.9vw; /* 18px */
+    }
+  }
+
+}

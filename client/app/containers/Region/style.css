@@ -1,0 +1,52 @@
+@import '../../css/common/text';
+@import '../../css/common/breakpoints';
+
+.region {
+  min-height: 100vh;
+  position: relative;
+}
+
+.uproxxLogo {
+  position: fixed;
+  top: 5vw;
+  left: 5vw;
+  z-index: 1001;
+  width: 20vw;
+  object-fit: contain;
+
+  @media (--desktop) {
+    top: 2vw;
+    left: 2vw;
+    width: 7vw;
+  }
+}
+
+.toyotaLogo {
+  position: fixed;
+  bottom: 5vw;
+  left: 5vw;
+  z-index: 1001;
+  width: 28vw;
+  object-fit: contain;
+
+  @media (--desktop) {
+    bottom: 2vw;
+    left: 2vw;
+    width: 10vw;
+  }
+}
+
+.adrxLogo {
+  position: fixed;
+  bottom: 5vw;
+  right: 5vw;
+  z-index: 1001;
+  width: 28vw;
+  object-fit: contain;
+
+  @media (--desktop) {
+    right: 2vw;
+    bottom: 2vw;
+    width: 10vw;
+  }
+}
